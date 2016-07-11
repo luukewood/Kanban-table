@@ -12,24 +12,24 @@ $(function() {
 	};	
 
 	function createColumn(self) {
-			var $column = $('<div>').addClass('column');
-			var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
-			var $columnList = $('<ul>').addClass('columnt-card-list');
-			var $columnDelete = $('<button>').addClass('btn-delete').text('X');
-			var $columnAddCard = $('<button>').addClass('add-card').text('Add Card');
+		var $column = $('<div>').addClass('column');
+		var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
+		var $columnList = $('<ul>').addClass('columnt-card-list');
+		var $columnDelete = $('<button>').addClass('btn-delete').text('X');
+		var $columnAddCard = $('<button>').addClass('add-card').text('Add Card');
 
-			$columnDelete.on('click', function(){
-				self.deleteColumn();
-			});
+		$columnDelete.on('click', function(){
+			self.deleteColumn();
+		});
 
-			$columnAddCard.on('click', function(){
-				self.addCard(new Card(prompt("Wpisz nazwę karty")));
-			});
+		$columnAddCard.on('click', function(){
+			self.addCard(new Card(prompt("Wpisz nazwę karty")));
+		});
 
-			$column.append($columnTitle)
-					.append($columnList)
-					.append($columnAddCard)
-					.append($columnDelete);
+		$column.append($columnTitle)
+				.append($columnList)
+				.append($columnAddCard)
+				.append($columnDelete);
 
 			return $column;
 		};

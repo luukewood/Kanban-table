@@ -52,7 +52,6 @@ $(function() {
 
 	function Card(description) {
 		var self = this;
-
 		this.id = randomString();
 		this.description = description;
 		this.$element = createCard();
@@ -77,7 +76,7 @@ $(function() {
 	};
 	
 	var board = {
-		name : 'Yablica Kanban',
+		name : 'Tablica Kanban',
 		addColumn: function(column) {
 			this.element.append(column.$element);
 			initSortable();
@@ -114,5 +113,4 @@ $(function() {
 
 	todoColumn.addCard(card1);
 	doingColumn.addCard(card2);
-
 });
